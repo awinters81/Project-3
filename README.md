@@ -72,7 +72,7 @@ After that, front end Javascript will capture this data and perform a fetch() re
 <strong> LOGIN/SIGNUP PAGE: </strong></br>
 <strong> USER PROFILE: </strong></br>
 
-<strong> UTOPIA app is deployed through Heroku and can be found <em>[right here](heroku link) </em> </strong>
+<strong> The Greene app is deployed through Heroku and can be found <em>[right here](heroku link) </em> </strong>
 <br></br>
 > ### ___Contacts___
 <p> This is the first official release of The Greene's web application. Please stay tuned for The Greene 2.0 and if you have any suggestions in regards to improving app performance or if you would like to collaborate, feel free to find us on GitHub or LinkedIn:</p>
