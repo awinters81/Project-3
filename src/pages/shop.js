@@ -4,7 +4,8 @@ import React, { Component }  from 'react';
 const Shop = () => {
     return (
         <div>
-            SHOP
+            SHOP like pho
+            TESLA GO!!
         </div>
     )
 }
