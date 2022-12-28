@@ -5,7 +5,7 @@ const routes = require('./src/routes');
 
 const PORT = 3001;
 const app = express();
-const activity = 'Vitamin Shop'
+const activity = 'Greene Shop'
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
