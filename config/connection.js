@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-// Wrap Mongoose around local connection to MongoDB
-// mongoose.connect('mongodb://localhost:27017/departmentsDB', {
-mongoose.connect('mongodb://0.0.0.0:27017/vitaminShop', {
+
+// mongoose.connect('mongodb://localhost:27017/vitaminShop', {
+mongoose.connect('mongodb://0.0.0.0:27017/greeneShop', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
