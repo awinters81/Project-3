@@ -16,10 +16,10 @@ import { useState } from 'react';
 
 function App() {
   // const {portfolio, setPortfolio} = useState('About')      // ES6
-  const [portfolio, setPortfolio] = useState('Shop')      // ES6
+  const [shop, setShop] = useState('Shop')      // ES6
   const Render = () => {      
-    console.log(portfolio)                             // ES6
-    switch (portfolio) {
+    console.log(shop)                             // ES6
+    switch (shop) {
       case 'Shop':
         console.log('Shop')
         return <Shop/>
@@ -36,7 +36,7 @@ function App() {
   return (
     <div className="App">
        {/* <   />                     /> self closing */}
-       <Navbar show_screen={portfolio} set_screen={setPortfolio}/>    
+       <Navbar show_screen={shop} set_screen={setShop}/>    
 
        <Render/>
        <Footer/>
