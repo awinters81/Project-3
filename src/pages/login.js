@@ -1,8 +1,6 @@
 import React, { Component }  from 'react';
 
 
-
-
 // Create function
 const Login = () => {
   return (
