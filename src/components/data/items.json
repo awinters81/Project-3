@@ -1,9 +1,23 @@
 [
-    {"id":1,"itemcode":"VS-1267_1042855","category":"Immune Support","name":"Quercetin + C","image":"quercetin_c.jpg","brand":"Vitamin Shoppe"},
-    {"id":2,"itemcode":"BI-1375_1780907","category":"Immune Support","name":"Oscillococcinum","image":"oscillococcinum.jpg","brand":"Boiron"},
-    {"id":3,"itemcode":"VS-4048_2220234","category":"Immune Support","name":"Zinc - Immune & Antioxidant Support","image":"zinc50.jpg","brand":"Vitamin Shoppe"},
-    {"id":4,"itemcode":"***","category":"Immune Support","name":"Zinc - Immune & Antioxidant Support","image":"cbd_gummies.jpg","brand":"Vitamin Shoppe"}
+    {"id":1,"itemcode":"VS-1267_1042855","name":"Quercetin + C","brand":"Vitamin Shoppe","image":"quercetin_c.jpg","price":24.99,"inventory":23,"category":"Immune Support"},
+    {"id":2,"itemcode":"BI-1375_1780907","name":"Oscillococcinum","brand":"Boiron","image":"oscillococcinum.jpg","price":29.99,"inventory":12,"category":"Immune Support"},
+    {"id":3,"itemcode":"VS-4048_2220234","name":"Zinc - Immune & Antioxidant Support","brand":"Vitamin Shoppe","image":"zinc50.jpg","price":21.99,"inventory":8,"category":"Immune Support"},
+    {"id":4,"itemcode":"VS-4128_2230902","name":"Liposomal Vitamin C","brand":"Vthrive","image":"liposomal_c.jpg","price":16.99,"inventory":7,"category":"Immune Support"},
+    {"id":5,"itemcode":"OO-1002_1220213","name":"Oreganol Oil","brand":"N.American Herb Spice","image":"oreganol_oil.jpg","price":29.99,"inventory":10,"category":"Immune Support"},
+    {"id":6,"itemcode":"VS-1645_1776509","name":"Organic Valerian Root Extract","brand":"Vitamin Shoppe","image":"valerian_extract.jpg","price":17.99,"inventory":10,"category":"Sleep and Mood"},
+    {"id":7,"itemcode":"ONN1010_2187888","name":"New Mood - With 5-HTP & L-Tryptophan","brand":"Onnit Labs","image":"newmood_5htp_trypt.jpg","price":29.99,"inventory":8,"category":"Sleep and Mood"},
+    {"id":8,"itemcode":"OLY1017_2207553","name":"Olly -Extra Strength Sleep Gummies","brand":"Olly","image":"olly_xs_gummies.jpg","price":18.99,"inventory":4,"category":"Sleep and Mood"},
+    {"id":9,"itemcode":"VS-3306_1978576","name":"Melatonin for Sleep Support","brand":"Vitamin Shoppe","image":"melatonin_5mg.jpg","price":8.99,"inventory":15,"category":"Sleep and Mood"},
+    {"id":10,"itemcode":"GU-0039_2206688","name":"Dr. Formulated CBD + Sleep Gummies","brand":"Garden Of Life","image":"cbd_gummies.jpg","price":34.99,"inventory":16,"category":"Sleep and Mood"},
+    {"id":11,"itemcode":"VS-6601_2231082","name":"KSM-66 Ashwagandha","brand":"Vthrive","image":"ashwagandha_ksm66.jpg","price":19.99,"inventory":12,"category":"Energy and Stress"},
+    {"id":12,"itemcode":"VS-4302_2232601","name":"Black Maca","brand":"Plnt","image":"black_maca.jpg","price":17.99,"inventory":7,"category":"Energy and Stress"},
+    {"id":13,"itemcode":"VS-2673_1969468","name":"Ashwagandha - Non-GMO","brand":"Plnt","image":"ashwagandha_nongmo.jpg","price":19.99,"inventory":5,"category":"Energy and Stress"},
+    {"id":14,"itemcode":"VS-6121_2212728","name":"Mood Balance","brand":"Vthrive","image":"moodbalance.jpg","price":31.99,"inventory":8,"category":"Energy and Stress"},
+    {"id":15,"itemcode":"PH-1065_1688365","name":"Adrenal Fatigue Fighter","brand":"Ridgecrest","image":"adrenal.jpg","price":31.99,"inventory":4,"category":"Energy and Stress"},
+    {"id":16,"itemcode":"VS-3451_2022754","name":"Brain Sharp","brand":"Vitamin Shoppe","image":"brainsharp.jpg","price":37.99,"inventory":6,"category":"Brain and Memory"},
+    {"id":17,"itemcode":"UX-1057_1787449","name":"Neuro-Mag - Magnesium L-Threonate","brand":"Life Extension","image":"neuromag.jpg","price":44.99,"inventory":11,"category":"Brain and Memory"},
+    {"id":18,"itemcode":"VS-1526_1051389","name":"Acetyl-L-Carnitine","brand":"Vitamin Shoppe","image":"acetylcarnitine.jpg","price":24.99,"inventory":8,"category":"Brain and Memory"},
+    {"id":19,"itemcode":"UX-1002_1624428","name":"Cognitex Elite","brand":"Life Extension","image":"cognitex.jpg","price":49.99,"inventory":3,"category":"Brain and Memory"},
+    {"id":20,"itemcode":"ONN1001_1991041","name":"Alpha Brain","brand":"Onnit Labs","image":"alphabrain.jpg","price":34.99,"inventory":16,"category":"Brain and Memory"}
 
 ]
-
-    

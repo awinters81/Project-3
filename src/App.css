@@ -1,57 +1,146 @@
-.App {
-    text-align: center;
-  }
+*{
+box-sizing: border-box;
+text-align: center;
+/* border: 1px solid rgba(11, 108, 20, 0.8); */
+font-size: 2vw;
+font-family: 'Calibri';
+
+}
+/* .App { */
   
+  /* border: 1px solid rgba(11, 108, 20, 0.8); */
+/* } */
+/*   
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    height: 40vmin;
-    pointer-events: none;
+    animation: App-logo-spin infinite 20s linear;
   }
-  
-  @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-      animation: App-logo-spin infinite 20s linear;
-    }
+}
+  */
+/* .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} */
+
+.App-link {
+  color: #61dafb;
+}
+
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-  
-  .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+  to {
+    transform: rotate(360deg);
   }
+} */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+
+}
+
+.menuoptions{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 10px auto 10px auto;
+  text-decoration:none;
   
-  .App-link {
-    color: #61dafb;
-  }
-  
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  .footer {
-    position: fixed;
-    bottom: 0;
-  
-  }
-  
-  .menuoptions{
-    display: flex;
-  }
-  
-  .menuoptions li{
-    /* margin-left: 10px;
-    margin-right: 10px; */
-    margin-left: 15%;
-    margin-right: 15%;
-    list-style-type: none;
-  
-  }
+}
+
+.menuoptions li{
+  margin: 20px auto 20px auto;
+  font-size: 36px;
+  /* margin-left: 10px; */
+  /* margin-right: 10px; */
+  /* margin-left: 15%; */
+  /* margin-right: 15%; */
+  list-style-type: none;
+  text-decoration:none;
+  text-shadow: 2px 2px 6px  rgb(5, 63, 6);
+
+}
+.page-title{
+font-size: 30px;
+}
+.login-section{
+margin: 20px auto 20px auto;
+display:flex;
+flex-direction: column;
+text-align: center;
+}
+.reviews-form{
+font-size: 24px;
+margin: 40px auto 20px auto;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+height: 450px;
+width: 600px;
+}
+.green-form label,.green-form input{
+  font-size: 20px;
+  height: 40px;
+  padding:20px;
+  margin: auto;
+}
+
+.login-form, .signup-form{
+  font-size: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 180px;
+  width: 500px;
+
+  margin: 20px auto 20px auto;
+  margin:auto;
+  box-shadow: 3px 3px 10px 3px rgb(5, 104, 7);
+  border: 1px solid rgba(11, 108, 20, 0.8);
+}
+input{
+  font-size: 24px;
+  padding: auto 5px auto 5px;
+  float:right;
+  width: 70%;
+  height: 30px;
+}
+label{
+  font-size: 24px;
+  font-style: 'bold';
+  text-align: left;
+  padding: auto 5px auto 5px;
+  float:left;
+  width:30%;
+  height: 30px;
+}
+button{
+  width: 90px;
+  font-size: 20px;
+  margin: 10px auto 10px auto;
+  cursor: pointer;
+  background-color: rgb(19, 72, 72);
+  color: #a7ecff;
+  border: 1px solid rgb(126, 244, 222);
+  border-radius: 5px;
+  transition: all .25s ease-in-out;
+}
+button:hover{
+  background-color: rgb(161, 255, 255);
+  color: #003488;
+  border: 1px solid rgb(18, 72, 98);
+  transition: all .25s ease-in-out;
+}
