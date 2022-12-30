@@ -1,3 +1,4 @@
-const Greene = require('./Greene');
+const Greene = require('./greene');
+const Users = require('./users');
 
-module.exports = { Greene };
+module.exports = { Greene, Users };
