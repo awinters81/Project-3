@@ -1,5 +1,6 @@
 import React, { Component }  from 'react';
 import ReactDOM from 'react-dom/client';
+import validator from 'validator'
 
 // Create function
 const Login = () => {
@@ -19,8 +20,10 @@ const Login = () => {
       case 'id-login'       :  
       if (e.target.value.length > 0) {
         alert ('filled');
+        break
        } else { 
         alert('empty')
+        break
       }
       
       alert ('left login')
@@ -30,7 +33,8 @@ const Login = () => {
 
 
       // var logTxt = logId.textContent;
-       console.log(  logId.value);
+       alert(  logId.value);
+
        break;
 
       case 'password-login' :  alert ('left password') 
@@ -40,6 +44,26 @@ const Login = () => {
        }
   
   }
+
+  // Email Validator
+  /* const [emailError, setEmailError] = useState('') */
+  const validateEmail = (e) => {
+    var email = e.target.value
+
+    var valemailEl = document.getElementById('emailMessage')
+
+    if (validator.isEmail(email)) {
+      // setEmailError('Valid Email :)')
+      // alert('Valid Email :)')
+      valemailEl.innerHTML = ''
+    } else {
+      // setEmailError('Enter valid Email!')
+      // alert('Please enter valid Email!')
+      valemailEl.innerHTML = 'Invalid Email!'
+
+    }
+  }
+  // Email Validator
 
 
   return (
@@ -51,7 +75,13 @@ const Login = () => {
      <form className='form login-form' onSubmit={handleSubmit}>
        <div className='main-form'>
          <label htmlFor='id-login'>Email:</label>
-         <input className='form-input' type='text' id='id-login' onBlur={handleChange} />
+         {/* 1) <input className='form-input' type='text' id='id-login' onBlur={handleChange} /> */}
+         <input className='form-input' type='text' id='userEmail' onBlur={(e) => validateEmail(e)} />
+
+         <span id='emailMessage' style={{
+                    fontWeight: 'bold',
+                    color: 'red', width: 50
+                  }}></span>  
        </div>
        <div className='main-form'>
          <label htmlFor='password-login'>Password:</label>
