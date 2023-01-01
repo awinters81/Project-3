@@ -1,6 +1,6 @@
 /*   ./src/controller/userController.js   */
 
-const { Users } = require('../models');
+const { Users } = require('../src/models');
 
 const userController = {
     getallUsers (req, res) {

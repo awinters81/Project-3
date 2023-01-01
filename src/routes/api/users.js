@@ -1,16 +1,15 @@
 /*   ./routes/api/userRoutes.js   */
 
-
-// HAS TO BE TRANSPORTED TO reviewsRoutes
-
+console.log("Test")
 
 const router = require('express').Router();
+
 const {
     getallUsers,
     createUser
     // addReaction,
     // delReaction
-} = require('../../controller/userController');
+} = require('../../controller/users');
 
 
 router
