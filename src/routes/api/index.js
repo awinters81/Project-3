@@ -7,6 +7,8 @@ const Users = require('./users');
 
 // router.use('/thought', thought);
 // router.use('/greene', thought);
-router.use('/users', user);
+
+// router.use('/users', user);
+router.use('/users', Users);
 
 module.exports = router;
