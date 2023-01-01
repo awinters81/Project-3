@@ -1,3 +1,5 @@
+/*  /src/models/Users.js  */
+
 const mongoose = require('mongoose');
 
 // 2) -------------------   Construct a new instance of the schema class
@@ -12,6 +14,7 @@ const UsersSchema = new mongoose.Schema({
 const Users = mongoose.model('Users', UsersSchema);
 const handleError = (err ? handleError(err) : console.log('New User was created'))
 
+/*
 //4) ------------------------  Create a New Instance the model, a document
 Users.create(
     {
@@ -20,7 +23,7 @@ Users.create(
     },
     (err) => (err ? handleError(err) : console.log('Created New User'))
 );
-        
+*/        
   
 module.export = Users;
 
