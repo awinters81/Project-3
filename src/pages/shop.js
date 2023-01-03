@@ -16,8 +16,7 @@ function shopDropSelector(){
       dropElemLi.textContent = shpCat; dropElemLi.setAttribute('a','#');
       dropUl.appendChild(dropElemLi);
   }
-return 
-categDropMenuElem;
+return categDropMenuElem;
 }
 
 const Shop = () => {
@@ -33,10 +32,23 @@ const Shop = () => {
 
   return (
     <div>
-      <div id='category-drop-menu'>{shopItems}</div>
+      {/* <div id='category-drop-menu'>{shopItems}</div> */}
+    <div id='dropMenu-container'>
+      <div className= 'dropMenu-size'>
+        <input id='search-items'></input>
+        <div id='dropMenuSelect'>
+          <ul id='dropMenuUL'> 
+              <li className='li-items' a='#' >AA</li>
+              <li className='li-items' a='#' >BB</li>
+              <li className='li-items' a='#' >CC</li>
+              <li className='li-items' a='#' >DD</li>
+              <li className='li-items' a='#' >EE</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-
-    {
+    {/* { */}
       <div className="flex-row">
         {/* repos && repos.map((item) =>  */}
         {ITEMS && ITEMS.map((item) =>
@@ -56,7 +68,7 @@ const Shop = () => {
           )
         }
        </div>
-    }  
+    {/* }   */}
     </div>
     )
 }
