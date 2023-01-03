@@ -4,16 +4,22 @@ console.log("Test")
 
 const router = require('express').Router();
 
+<<<<<<< HEAD
 const { getallUsers, createUser} = require('../../controller/users');
+=======
+const {
+    getallUsers
+    // ,createUser
+>>>>>>> 5dc481d5cbfaaa71c2c350fee0fea4b6a6b02e4f
     // addReaction,
     // delReaction
 // } = require('../../controller/users');
 
 
 router
-  .route('/users')
+  .route('/')
   .get(getallUsers)  
-  .post(createUser);
+  // .post(createUser);
 //   .get(getAllThoughts)
 //   .post(addThought);
 

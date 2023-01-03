@@ -1,6 +1,6 @@
 /*   ./src/controller/userController.js   */
 
-const { Users } = require('../src/models');
+const { Users } = require('./../../src/models');
 
 const userController = {
     getallUsers (req, res) {
@@ -13,15 +13,15 @@ const userController = {
             res.json(dbUserData);
           })
           .catch(err => res.json(err))
-    },
+    }   // ,
 
 
-    createUser({ body }, res) {
-        console.log('Create Users body')
-        Users.create(body)
-            .then(dbUserData => res.json(dbUserData))
-            .catch(err => res.json(err));
-    }
+    // createUser({ body }, res) {
+    //     console.log('Create Users body')
+    //     Users.create(body)
+    //         .then(dbUserData => res.json(dbUserData))
+    //         .catch(err => res.json(err));
+    // }
 }
 
 module.exports = userController

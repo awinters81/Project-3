@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+<<<<<<< HEAD
 
 mongoose.set('strictQuery', true); //--- newly added to avoid deprecated warnings----
 
@@ -8,9 +9,11 @@ mongoose.set('strictQuery', true); //--- newly added to avoid deprecated warning
 // Or use `mongoose.set('strictQuery', true);` to suppress this warning.
 // (Use `node --trace-deprecation ...` to show where the warning was created)
 
+=======
+mongoose.set('strictQuery', true);  //--- newly added to avoid deprecated warnings----
+>>>>>>> 5dc481d5cbfaaa71c2c350fee0fea4b6a6b02e4f
 
 mongoose.connect('mongodb://localhost:27017/greeneShop', {
-// mongoose.connect('mongodb://0.0.0.0:27017/greeneShop', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

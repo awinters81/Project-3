@@ -6,14 +6,17 @@ const connection = require('../../config/connection');
 
 
 // 2) -------------------   Construct a new instance of the schema class
-const UsersSchema = new mongoose.Schema(
+const UsersSchema = new mongoose.Schema({
+  email: { type: String, required: true },    // Configure individual properties using Schema Types 
+  password: { type: String, required: true },  // The type of data is set to 'String' and required is set to false, meaning it will accept null values
+  // Use built in date method to get current date
+  lastAccessed: { type: Date, default: Date.now },
+},
   {
-    email: { type: String, required: true },    // Configure individual properties using Schema Types 
-    password: { type: String, required: true },  // The type of data is set to 'String' and required is set to false, meaning it will accept null values
-    // Use built in date method to get current date
-    lastAccessed: { type: Date, default: Date.now },
-
-    toJSON: { virtuals: true, getters: true},
+    toJSON: {
+        virtuals: true,
+        getters: true
+    },
     // prevents virtuals from creating duplicate of _id as `id`
     id: false
   }
@@ -21,16 +24,7 @@ const UsersSchema = new mongoose.Schema(
 
 //3) --------------  import/require JSON file to loop through & Seed the database --
 const Users = mongoose.model('Users', UsersSchema);
-const handleError = (err ? handleError(err) : console.log('New User was created'))
-
-
-connection.once('open', async () => {
-  console.log('connected- deleting prior records before seeding');
-  await Users.deleteMany({});
-});
-
-
-
+// const handleError = (err ? handleError(err) : console.log('New User was created'))
 
 //4) ------------------------  Create a New Instance the model, a document
 Users.create(
