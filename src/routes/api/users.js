@@ -4,12 +4,10 @@ console.log("Test")
 
 const router = require('express').Router();
 
-const {
-    getallUsers,
-    createUser
+const { getallUsers, createUser} = require('../../controller/users');
     // addReaction,
     // delReaction
-} = require('../../controller/users');
+// } = require('../../controller/users');
 
 
 router
