@@ -1,6 +1,5 @@
 // import logo from './logo.svg';
 
-
 import React   from 'react';
 import './App.css';
 import Navbar  from './components/navbar'
@@ -32,11 +31,8 @@ function App() {
     <div className="App">
 
        <Navbar show_screen={pageSelect} set_screen={setShop}/>    
-
        <Render/>
        <Footer/>
-
-
 
     </div>
   );

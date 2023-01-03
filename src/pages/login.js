@@ -30,10 +30,6 @@ const Login = () => {
       alert ('left login')
       var logId = document.getElementById(cFrom);
 
-      
-
-
-      // var logTxt = logId.textContent;
        alert(  logId.value);
 
        break;
@@ -41,10 +37,69 @@ const Login = () => {
       case 'password-login' :  alert ('left password') 
 
         break;
-      
        }
   
   }
+
+  const switchform = (e) => {
+    e.preventDefault();
+
+    console.log(e);
+    var elemSwitch = document.getElementById(e);
+    
+    if(elemSwitch.style.display == 'none'){
+       elemSwitch.style.display = 'block';
+    }else{
+       elemSwitch.style.display = 'none'
+    }
+ }
+  //   var placeHldrEmail = userEmail.getAttribute('placeholder');
+  //   var userLbl = document.getElementById('userLabel');
+
+  //   var passLogin = document.getElementById('password-login');
+  //   var passLoginLbl = document.getElementById('pass-label-log');
+  //   var placeHldrPass = passLogin.getAttribute('placeholder');  
+
+  //   var passConfirm = document.getElementById('password-confirm');
+  //   var passConfLbl = document.getElementById('pass-label-conf');
+  //   var placeHldrConf = passConfirm.getAttribute('placeholder'); 
+
+  //   var submitBtn = document.getElementById('submit-button');
+ 
+
+ 
+  //   switch (e) {
+  //     case 'login' :  
+        
+  //       placeHldrEmail.setAttribute('Enter Email ID : ');
+  //       userLbl.textContent = 'User ID :';
+  //       placeHldrPass.setAttribute('Enter Password');
+  //       passLoginLbl.textContent = 'Password :';
+  //       submitBtn.textContent = 'Login';
+  //       passConfLbl.style.display = 'none';
+  //       break
+  //     case 'signup' :  
+  //      } else { 
+  //       placeHldrEmail.setAttribute('New Email ID :');
+  //       userLbl.textContent = 'Create New ID :';
+  //       placeHldrPass.setAttribute('Create Password');
+  //       passLoginLbl.textContent = 'New Password :';
+  //       submitBtn.textContent = 'Sign Up';
+  //       passConfLbl.style.display = 'flex';
+  //       placeHldrConf.setAttribute = 'Confirm Password';
+
+
+  //       submitBtn.textContent = 'Sign Up';
+      
+  //     }
+
+  //   }
+  // }
+
+
+
+
+
 
   // Email Validator
   /* const [emailError, setEmailError] = useState('') */
@@ -65,56 +120,73 @@ const Login = () => {
     }
   }
   // Email Validator
+  // $('.saveBtn').on('click', function() {
+  //   // get nearby values
+  //   var value = $(this)
+  //     .siblings('.description')
+  //     .val();
+  //   var time = $(this)
+  //     .parent()
+  //     .attr('id');
 
+  //   // save in localStorage
+  //   localStorage.setItem(time, value);
+
+  //   // Show notification that item was saved to localStorage by adding class 'show'
+  //   $('.notification').addClass('show');
+
+  //   // Timeout to remove 'show' class after 5 seconds
+  //   setTimeout(function() {
+  //     $('.notification').removeClass('show');
+  //   }, 5000);
+  // });
 
   return (
-    <div>
-      {
-   <div className='login-signup-forms'>
-   <div className='login-section'>
-     <h2 className='page-title'>Login</h2>
-     <form className='form login-form' onSubmit={handleSubmit}>
-       <div className='main-form'>
-         <label htmlFor='id-login'>Email:</label>
-         {/* 1) <input className='form-input' type='text' id='id-login' onBlur={handleChange} /> */}
-         <input className='form-input' type='text' id='userEmail' onBlur={(e) => validateEmail(e)} />
+    <div className='react-container'>
+         <div id='form-switch'>
+              <h2 id='login-title'   onClick='switchform(login)'>Login</h2>
+              <h2 id='signup-title'  onClick='switchform(signup)'>Signup</h2>
+            </div>
+        <div id='input-forms-login'>
+        <h2 className='page-title'>Login</h2>
+            <form className='whole-form' onSubmit={handleSubmit}>
+              <div className='main-form'>
+                  <label htmlFor='id-login'>Email:</label>
+                  {/* 1) <input className='form-input' type='text' id='id-login' onBlur={handleChange} /> */}
+                  <input className='form-input' inputTest = 'reset' type='text' id='userEmail' placeholder='Enter Email' onBlur={(e) => validateEmail(e)} />
+              </div>
+              {/* <span id='emailMessage' style={{fontWeight: 'bold', color: 'red', width: 50 }}></span> */}
+              <div className='main-form'>
+                  <label htmlFor='password-login'>Password:</label>
+                  <input className='form-input' inputTest = 'reset' type='password' id='password-login' placeholder='Enter Password' onBlur={handleChange} />
+              </div>
+              <div className='sign-log-button'>
+                  <button className='form-button' id='signin-button' type='submit' >login</button>
+              </div>
+          </form>  
+        </div>
 
-         <span id='emailMessage' style={{
-                    fontWeight: 'bold',
-                    color: 'red', width: 50
-                  }}></span>  
-       </div>
-       <div className='main-form'>
-         <label htmlFor='password-login'>Password:</label>
-         <input className='form-input' type='password' id='password-login' onBlur={handleChange} />
-       </div>
-       <div className='main-form'>
-         <button className='main-button' type='submit' >login</button>
-       </div>
-     </form>
-   </div>
-   <div className='login-section'>
-     <h2 className='page-title'>Signup</h2>
-     <form className='form signup-form'>
-       <div className='main-form'>
-         <label htmlFor='user-signup'>Username:</label>
-         <input className='form-input' type='text' id='user-signup' />
-       </div>
-       <div className='main-form'>
-         <label htmlFor='email-signup'>Email:</label>
-         <input className='form-input' type='text' id='email-signup' />
-       </div>
-       <div className='main-form'>
-         <label htmlFor='password-signup'>Password:</label>
-         <input className='form-input' type='password' id='password-signup' />
-       </div>
-       <div className='main-form'>
-         <button className='main-button' type='submit'>signup</button>
-       </div>
-     </form>
-   </div>
- </div>
-      }
+        <div id='input-forms-signup'>
+          <h2 className='page-title'>Signup</h2>
+          <form className='whole-form'>
+              <div className='main-form'>
+                  <label htmlFor='email-signup'>Create New ID:</label>
+                  <input className='form-input' inputTest = 'reset' type='text' id='email-signup' placeholder='New Email'/>
+              </div>
+              <div className='main-form'>
+                  <label htmlFor='password-signup'>Password:</label>
+                  <input className='form-input' inputTest = 'reset' type='password' id='password-signup' placeholder='Create Password'/>
+              </div>
+              <div className='main-form pass-confirm'>
+                  <label htmlFor='password-signup'>Password:</label>
+                  <input className='form-input' inputTest = 'reset' type='password' id='password-confirm' placeholder='Confirm Password' />
+              </div>
+              {/* <br></br> */}
+              <div className='sign-log-button'>
+                  <button className='form-button' id='signup-button' type='submit'>signup</button>
+              </div>
+          </form>
+        </div>
     </div>
   )
 }
