@@ -4,22 +4,30 @@ const { Schema, model } = require('mongoose');
 // const inventory = require('../seed/items.json');
 
 // 2) -------------------   Construct a new instance of the schema class
-const GreeneSchema = new mongoose.Schema({
-  id: {type: Number, required: true },
-  name: { type: String, required: true },    // Configure individual properties using Schema Types 
-  brand: { type: String, required: true },  // The type of data is set to 'String' and required is set to false, meaning it will accept null values
-  price: {type: Number, required: true },
-  itemcode: String,
-  image: String,  // capsules/liquid.. 
-  inventory: Number,
-  category: String,
-  // Use built in date method to get current date
-  lastAccessed: { type: Date, default: Date.now },
-});
+// const GreeneSchema = new mongoose.Schema({
+  const GreeneSchema = new Schema(
+    {
+      id: {type: Number, required: true },
+      name: { type: String, required: true },    // Configure individual properties using Schema Types 
+      brand: { type: String, required: true },  // The type of data is set to 'String' and required is set to false, meaning it will accept null values
+      price: {type: Number, required: true },
+      itemcode: String,
+      image: String,  // capsules/liquid.. 
+      inventory: Number,
+      category: String,
+      // Use built in date method to get current date
+      lastAccessed: { type: Date, default: Date.now },
+    }
+);
 
 //3) --------------  import/require JSON file to loop through & Seed the database --
 
-const Greene = mongoose.model('Greene', GreeneSchema);
+// const Greene = mongoose.model('Greene', GreeneSchema);
+const Greene = model('Greene', GreeneSchema);
+module.exports = Greene;
+
+
+
 // const handleError = (err) => console.error(err);
 
 // connection.once('open', async () => {
@@ -60,4 +68,4 @@ const Greene = mongoose.model('Greene', GreeneSchema);
 //     (err) => (err ? handleError(err) : console.log('Created New Vitamin'))
 // );
 
-module.exports = Greene;
+

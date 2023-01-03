@@ -1,18 +1,17 @@
-/*  /src/models/Users.js  */
-
-// const mongoose = require('mongoose');
 const { Schema, model } = require('mongoose');
-
+// const mongoose = require('mongoose');
 // const connection = require('../../config/connection');
 // const users = require('../seed/users.json');
 // const { Schema, model } = require('mongoose'); //  <==
 
 
 // 2) -------------------   Construct a new instance of the schema class
-const UsersSchema = new mongoose.Schema(
+// const UsersSchema = new mongoose.Schema(
+const UserSchema = new Schema(
   
   {
-    email: { type: String, required: true },    // Configure individual properties using Schema Types 
+
+    email:    { type: String, required: true },    // Configure individual properties using Schema Types 
     password: { type: String, required: true },  // The type of data is set to 'String' and required is set to false, meaning it will accept null values
     // Use built in date method to get current date
     lastAccessed: { type: Date, default: Date.now },
@@ -28,7 +27,10 @@ const UsersSchema = new mongoose.Schema(
 );
 
 //3) --------------  import/require JSON file to loop through & Seed the database --
-const Users = mongoose.model('users', UsersSchema);
+// const Users = mongoose.model('users', UsersSchema);
+const Users = model('Users', UserSchema);
+
+module.exports = Users;
 // const handleError = (err ? handleError(err) : console.log('New User was created'))
 
 // connection.once('open', async () => {
@@ -49,5 +51,5 @@ const Users = mongoose.model('users', UsersSchema);
 // );
     
   
-module.export = Users;
+
 
