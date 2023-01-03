@@ -41,18 +41,27 @@ const Login = () => {
   
   }
 
-  const switchform = (e) => {
-    e.preventDefault();
+  
+ function switchform (e) { 
 
-    console.log(e);
-    var elemSwitch = document.getElementById(e);
+  const displayElem = e.target.id;
+  console.log(displayElem);
+  var logElem = document.getElementById('input-forms-login');
+  var signElem= document.getElementById('input-forms-signup');
+
+
+  if (displayElem === 'login-title'){
     
-    if(elemSwitch.style.display == 'none'){
-       elemSwitch.style.display = 'block';
-    }else{
-       elemSwitch.style.display = 'none'
-    }
- }
+    logElem.style.display = "block";
+    signElem.style.display = "none"
+  } else {
+    logElem.style.display = "none";
+    signElem.style.display = "block";
+  }
+
+
+
+}
   //   var placeHldrEmail = userEmail.getAttribute('placeholder');
   //   var userLbl = document.getElementById('userLabel');
 
@@ -144,8 +153,8 @@ const Login = () => {
   return (
     <div className='react-container'>
          <div id='form-switch'>
-              <h2 id='login-title'   onClick='switchform(login)'>Login</h2>
-              <h2 id='signup-title'  onClick='switchform(signup)'>Signup</h2>
+              <h2 id='login-title'  onclick={(strID) =>switchform(strID)}>Login</h2>
+              <h2 id='signup-title' onclick={(strID) =>switchform(strID)}>Signup</h2>
             </div>
         <div id='input-forms-login'>
         <h2 className='page-title'>Login</h2>
