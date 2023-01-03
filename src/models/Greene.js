@@ -1,6 +1,7 @@
-const mongoose = require('mongoose');
-const connection = require('../../config/connection');
-const inventory = require('../seed/items.json');
+const { Schema, model } = require('mongoose');
+// const mongoose = require('mongoose');
+// const connection = require('../../config/connection');
+// const inventory = require('../seed/items.json');
 
 // 2) -------------------   Construct a new instance of the schema class
 const GreeneSchema = new mongoose.Schema({
@@ -19,16 +20,14 @@ const GreeneSchema = new mongoose.Schema({
 //3) --------------  import/require JSON file to loop through & Seed the database --
 
 const Greene = mongoose.model('Greene', GreeneSchema);
-const handleError = (err) => console.error(err);
+// const handleError = (err) => console.error(err);
 
-
-connection.once('open', async () => {
-  console.log('connected- deleting prior records before seeding');
-  await Greene.deleteMany({});
-
-  console.log('connected- seeding begins');
-  await Greene.insertMany(inventory);
-});
+// connection.once('open', async () => {
+//   console.log('connected- deleting prior records before seeding');
+//   await Greene.deleteMany({});
+//   console.log('connected- seeding begins');
+//   await Greene.insertMany(inventory);
+// });
 
 
 // create in bulk---------------------
